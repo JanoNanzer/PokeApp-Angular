@@ -1,0 +1,444 @@
+@use "../../../shared/pokemon-types.scss" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.5rem 0.3rem 0.3rem;
+  font-size: medium;
+  color: grey;
+  transition: background-color 3s ease;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 1 / 1.3;
+
+  &_image {
+    width: 80%;
+  }
+
+  &_body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0px 10px;
+    flex-direction: column;
+  }
+
+  &_id-types-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &_title {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #ffffff;
+    &_container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &_type {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    &_image {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.NORMAL {
+  background-color: #a8a77a;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: background-color 0.5s;
+  transition: all 0.2s;
+}
+.NORMAL:hover {
+  box-shadow: 0px 0px 15px -1px #c2c1a2;
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.FIRE {
+  background-color: #ee8130;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: background-color 0.5s;
+  transition: all 0.2s;
+}
+.FIRE:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #f19b59;
+}
+
+.WATER {
+  background-color: #6390f0;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.WATER:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #82a6f3;
+}
+
+.ELECTRIC {
+  background-color: #f7d02c;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.ELECTRIC:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #f9dd6b;
+}
+
+.GRASS {
+  background-color: #7ac74c;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.GRASS:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #94d270;
+}
+
+.ICE {
+  background-color: #96d9d6;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.ICE:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #abe1de;
+}
+
+.FIGHTING {
+  background-color: #c22e28;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.FIGHTING:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #ce5753;
+}
+
+.POISON {
+  background-color: #a33ea1;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.POISON:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #b565b4;
+}
+
+.GROUND {
+  background-color: #e2bf65;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.GROUND:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #e8cc84;
+}
+
+.FLYING {
+  background-color: #a98ff3;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.FLYING:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #bba5f5;
+}
+
+.PSYCHIC {
+  background-color: #f95587;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.PSYCHIC:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #fa779e;
+}
+
+.BUG {
+  background-color: #a6b91a;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.BUG:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #b8c748;
+}
+
+.ROCK {
+  background-color: #b6a136;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.ROCK:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #c5b45e;
+}
+
+.GHOST {
+  background-color: #735797;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.GHOST:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #8f79ac;
+}
+
+.DRAGON {
+  background-color: #6f35fc;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.DRAGON:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #8b5dfd;
+}
+
+.DARK {
+  background-color: #705746;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.DARK:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #8d796b;
+}
+
+.STEEL {
+  background-color: #b7b7ce;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.STEEL:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #c5c5d8;
+}
+
+.FAIRY {
+  background-color: #d685ad;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  transition: all 0.2s;
+}
+.FAIRY:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #de9dbd;
+}
+
+.SHADOW {
+  background-color: #000000;
+  border-radius: 100%;
+  height: 30px;
+  padding: 6px;
+  cursor: default;
+  color: white;
+  transition: all 0.2s;
+}
+.SHADOW:hover {
+  box-shadow: 0px 0px 15px -1px #191919;
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.type-fire {
+  background: $type-fire;
+}
+
+.type-water {
+  background: $type-water;
+}
+
+.type-grass {
+  background: $type-grass;
+}
+
+.type-electric {
+  background: $type-electric;
+}
+
+.type-ice {
+  background: $type-ice;
+}
+
+.type-ghost {
+  background: $type-ghost;
+}
+
+.type-dark {
+  background: $type-dark;
+}
+
+.type-psychic {
+  background: $type-psychic;
+}
+
+.type-bug {
+  background: $type-bug;
+}
+
+.type-flying {
+  background: $type-flying;
+}
+
+.type-ground {
+  background: $type-ground;
+}
+
+.type-poison {
+  background: $type-poison;
+}
+
+.type-normal {
+  background: $type-normal;
+}
+
+.type-fighting {
+  background: $type-fighting;
+}
+
+.type-rock {
+  background: $type-rock;
+}
+
+.type-dragon {
+  background: $type-dragon;
+}
+
+.type-steel {
+  background: $type-steel;
+}
+
+.type-fairy {
+  background: $type-fairy;
+}

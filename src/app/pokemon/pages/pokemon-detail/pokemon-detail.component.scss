@@ -1,0 +1,324 @@
+.detail-wrapper {
+  background: #f7f7fc;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #182e6f;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+
+    .app-title {
+      font-size: 1.5rem;
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .detail-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: white;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    .info-section,
+    .image-section,
+    .stats-section {
+      flex: 1;
+      min-width: 280px;
+      margin: 1rem;
+    }
+
+    .pokemon-name {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .attribute {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      display: flex;
+      gap: 20px;
+
+      strong {
+        color: #444;
+      }
+
+      .badge-container {
+        margin-top: 0.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 4px;
+        height: 30px;
+        width: 90px;
+        filter: saturate(100%) brightness(110%);
+        transition: all 0.2s;
+        justify-content: space-around;
+        align-content: center;
+      }
+    }
+
+    .badge {
+      border-radius: 8px;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-top: 1px;
+    }
+
+    .pokemon-img {
+      max-width: 350px;
+      width: 100%;
+      display: block;
+      margin: auto;
+    }
+
+    .stat {
+      margin-bottom: 0.8rem;
+    }
+  }
+}
+
+.type-image {
+  width: 20px;
+  height: 20px;
+}
+
+.NORMAL {
+  background-color: #a8a77a;
+  padding: 6px;
+  transition: background-color 0.5s;
+  transition: all 0.2s;
+}
+.NORMAL:hover {
+  box-shadow: 0px 0px 15px -1px #c2c1a2;
+  filter: saturate(200%);
+  transform: scale(1.1);
+}
+
+.FIRE {
+  background-color: #ee8130;
+  padding: 6px;
+  transition: background-color 0.5s;
+  transition: all 0.2s;
+}
+.FIRE:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #f19b59;
+}
+
+.WATER {
+  background-color: #6390f0;
+  padding: 6px;
+  transition: all 0.2s;
+}
+.WATER:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #82a6f3;
+}
+
+.ELECTRIC {
+  background-color: #f7d02c;
+  padding: 6px;
+  transition: all 0.2s;
+}
+
+.ELECTRIC:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #f9dd6b;
+}
+
+.GRASS {
+  background-color: #7ac74c;
+  height: 6px;
+  transition: all 0.2s;
+}
+.GRASS:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #94d270;
+}
+
+.ICE {
+  background-color: #96d9d6;
+  height: 6px;
+  transition: all 0.2s;
+}
+.ICE:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #abe1de;
+}
+
+.FIGHTING {
+  background-color: #c22e28;
+  height: 30 6px;
+  transition: all 0.2s;
+}
+
+.FIGHTING:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #ce5753;
+}
+
+.POISON {
+  background-color: #a33ea1;
+  height: 30px;
+  transition: all 0.2s;
+}
+.POISON:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #b565b4;
+}
+
+.GROUND {
+  background-color: #e2bf65;
+  height: 30px;
+  transition: all 0.2s;
+}
+.GROUND:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #e8cc84;
+}
+
+.FLYING {
+  background-color: #a98ff3;
+  height: 30px;
+  transition: all 0.2s;
+}
+.FLYING:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #bba5f5;
+}
+
+.PSYCHIC {
+  background-color: #f95587;
+  height: 30px;
+  padding: 6px;
+  transition: all 0.2s;
+}
+.PSYCHIC:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #fa779e;
+}
+
+.BUG {
+  background-color: #a6b91a;
+  padding: 6px;
+  transition: all 0.2s;
+}
+.BUG:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #b8c748;
+}
+
+.ROCK {
+  background-color: #b6a136;
+  padding: 6px;
+  transition: all 0.2s;
+}
+.ROCK:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #c5b45e;
+}
+
+.GHOST {
+  background-color: #735797;
+  padding: default;
+  transition: all 0.2s;
+}
+.GHOST:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #8f79ac;
+}
+
+.DRAGON {
+  background-color: #6f35fc;
+  height: 30px;
+  padding: default;
+  transition: all 0.2s;
+}
+.DRAGON:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #8b5dfd;
+}
+
+.DARK {
+  background-color: #705746;
+  height: 30px;
+  padding: 6p default;
+  transition: all 0.2s;
+}
+.DARK:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #8d796b;
+}
+
+.STEEL {
+  background-color: #b7b7ce;
+  height: 30px;
+  padding: 6px;
+  transition: all 0.2s;
+}
+.STEEL:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #c5c5d8;
+}
+
+.FAIRY {
+  background-color: #d685ad;
+  height: 30px;
+  padding: 6px;
+  transition: all 0.2s;
+}
+.FAIRY:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -1px #de9dbd;
+}
+
+.SHADOW {
+  background-color: #000000;
+  padding: 6px;
+  color: white;
+  transition: all 0.2s;
+}
+.SHADOW:hover {
+  box-shadow: 0px 0px 15px -1px #191919;
+  filter: saturate(200%);
+  transform: scale(1.1);
+}

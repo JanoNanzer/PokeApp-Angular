@@ -1,0 +1,45 @@
+export const TYPE_IMAGE_MAP: Record<string, string> = {
+  bug: 'assets/images/bug.png',
+  dark: 'assets/images/dark.png',
+  dragon: 'assets/images/dragon.png',
+  electric: 'assets/images/electric.png',
+  fairy: 'assets/images/fairy.png',
+  fighting: 'assets/images/fighting.png',
+  fire: 'assets/images/fire.png',
+  flying: 'assets/images/flying.png',
+  ghost: 'assets/images/ghost.png',
+  grass: 'assets/images/grass.png',
+  ground: 'assets/images/ground.png',
+  ice: 'assets/images/ice.png',
+  normal: 'assets/images/normal.png',
+  poison: 'assets/images/poison.png',
+  psychic: 'assets/images/psychic.png',
+  rock: 'assets/images/rock.png',
+  steel: 'assets/images/steel.png',
+  water: 'assets/images/water.png',
+};
+
+export const TOTAL_POKEMONS = 1079;
+export const POKEMONS_PER_PAGE = 30;
+
+export const TYPE_COLORS_MAP: Record<string, string> = {
+  bug: '#77c600',
+  dark: '#000000',
+  dragon: '#002aa5',
+  electric: '#cf9100',
+  fairy: '#d565d7',
+  fighting: '#df0068',
+  fire: '#f57500',
+  flying: '#3e6dc7',
+  grass: '#00b551',
+  ghost: '#000014',
+  ground: '#8d6e57',
+  ice: '#00a8ad',
+  normal: '#8f878a',
+  poison: '#7e009b',
+  psychic: '#e82544',
+  rock: '#b57d5d',
+  steel: '#005984',
+  water: '#1188c4',
+  shadow: '#1c152d',
+};

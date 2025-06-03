@@ -1,0 +1,70 @@
+<header class="header">
+  <form [formGroup]="searchForm">
+    <div class="search-container">
+      <p-iconField iconPosition="right">
+        <p-inputIcon
+          *ngIf="!loading && !refresh"
+          styleClass="pi pi-search"
+          (click)="search()"
+          [style]="{color: '#182e6f', cursor: 'pointer'}"
+        />
+        <p-inputIcon *ngIf="loading" styleClass="pi pi-spinner pi-spin" />
+        <p-inputIcon
+          *ngIf="refresh"
+          (click)="refreshList()"
+          styleClass="pi pi-refresh"
+          [style]="{color: '#182e6f ', cursor: 'pointer'}"
+        />
+        <input
+          type="text"
+          pInputText
+          placeholder="Search by name "
+          formControlName="name"
+        />
+      </p-iconField>
+      <p-confirmDialog class="modal" />
+
+      <p-dropdown
+        formControlName="type"
+        [options]="catalogueTypes"
+        optionLabel="name"
+        placeholder="Select a Pokemon type"
+        [checkmark]="true"
+        [showClear]="true"
+        (onChange)="selectedType($event)"
+        (onClear)="clearType($event)"
+      />
+    </div>
+  </form>
+  <h1 class="app-title">PokeApp</h1>
+</header>
+
+<div *ngIf="loading" class="loading">
+  <p-progressSpinner ariaLabel="loading" />
+</div>
+
+<ng-container *ngIf="!loading">
+  <div class="list">
+    <ng-container *ngFor="let pokemon of pokemonList">
+      <div class="card">
+        <app-pokemon-card [pokemon]="pokemon" />
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!isFiltered">
+  <p-paginator
+    [rows]="pokemonsPerPage"
+    [totalRecords]="totalPokemons"
+    (onPageChange)="onPaginator($event)"
+  ></p-paginator>
+</ng-container>
+
+<ng-container *ngIf="isFiltered">
+  <p-paginator
+    [rows]="pokemonsPerPage"
+    [totalRecords]="totalPokemonFiltered"
+    (onPageChange)="onPaginatorFiltered($event)"
+  ></p-paginator>
+</ng-container>

@@ -1,0 +1,96 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 200px;
+}
+
+.loading {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #182e6f;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .app-title {
+      align-self: center;
+    }
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.search-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal {
+  ::ng-deep {
+    .p-dialog-header {
+      background-color: #182e6f;
+    }
+    .p-dialog-content {
+      background-color: #182e6f;
+      color: white;
+    }
+    .p-dialog-footer {
+      background-color: #182e6f;
+    }
+  }
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}

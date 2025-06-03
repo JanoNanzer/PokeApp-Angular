@@ -1,0 +1,43 @@
+<div class="detail-wrapper" *ngIf="pokemon$ | async as pokemon">
+  <header class="header">
+    <button routerLink="/" class="back-btn">←</button>
+    <h1 class="app-title">PokeApp</h1>
+  </header>
+
+  <div class="detail-card">
+    <div class="info-section">
+      <h2 class="pokemon-name">{{ pokemon.name | uppercase }}</h2>
+      <div class="attribute"><strong>ID</strong> #{{ pokemon.id }}</div>
+      <div class="attribute">
+        <strong>Height</strong> {{ pokemon.height / 10 }}m
+      </div>
+      <div class="attribute">
+        <strong>Weight</strong> {{ pokemon.weight / 10 }}kg
+      </div>
+
+      <div class="attribute">
+        <strong>Type</strong>
+        <ng-container *ngFor="let type of pokemon.types; let i = index">
+          <div [ngClass]="type.type.name.toUpperCase()" class="badge-container">
+            <img
+              class="type-image"
+              alt=""
+              [src]="TYPE_IMAGE_MAP[type.type.name]"
+            />
+            <span class="badge">
+              {{ type.type.name | titlecase }}
+            </span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="image-section">
+      <img [src]="pokemon.image" [alt]="pokemon.name" class="pokemon-img" />
+    </div>
+
+    <div class="stats-section">
+      <p-chart type="radar" [data]="data" [options]="options" />
+    </div>
+  </div>
+</div>

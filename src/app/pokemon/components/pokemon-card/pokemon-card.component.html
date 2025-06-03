@@ -1,0 +1,31 @@
+<div
+  class="card"
+  [style]="{ height: '220px' }"
+  (click)="goDetails()"
+  [ngClass]="pokemon.types[0].type.name | pokemonTypeClass"
+>
+  <img class="card_image" alt="Card" [src]="pokemon.image" />
+  <div class="card_body">
+    <div class="card_id-types-container">
+      <div class="card_title_container">
+        <p class="card_title">{{ pokemon.id }} -</p>
+      </div>
+      <div class="card_type">
+        <ng-container *ngFor="let type of pokemon.types; let i = index">
+          <div [class]="type.type.name.toUpperCase()">
+            <img
+              class="card_type_image"
+              alt="Card image"
+              [src]="TYPE_IMAGE_MAP[type.type.name]"
+            />
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div>
+      <p class="card_title">
+        {{ pokemon.name.toUpperCase().replace('-', ' ') }}
+      </p>
+    </div>
+  </div>
+</div>
