@@ -1,27 +1,67 @@
-# PokeApp
+# PokeApp SPA - Challenge Técnico Frontend Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Aplicación web construida en Angular que consume la [PokeAPI](https://pokeapi.co/) para listar, buscar, filtrar y ver en detalle Pokémon. Desarrollado como parte de un challenge técnico para un puesto SSR/SR de Frontend Angular.
 
-## Development server
+##  Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Listado de Pokémon con paginación
+- Búsqueda por nombre
+- Filtros por tipo
+- Vista de detalle de cada Pokémon
+- Manejo de estado con NgRx
+- Arquitectura modular (`feature`, `shared`, `app`)
+- UI responsive y accesible (con PrimeNG)
 
-## Code scaffolding
+##  Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17
+- NgRx Store & Effects
+- RxJS
+- PrimeNG
+- Standalone Components
+- TypeScript
+- SCSS
+  
+##  Estructura de carpetas
 
-## Build
+```bash
+src/
+├── app/
+│ ├── pokemon/
+│ │ ├── components/ # Componentes reutilizables ( PokemonCard )
+│ │ ├── models/ # Interfaces y tipos
+│ │ ├── pages/ # Vistas: pokemon-list, pokemon-detail
+│ │ ├── services/ # Servicio para consumir la PokeAPI
+│ │ ├── store/ # NgRx: actions, effects, reducer, selectors
+│ │ ├── pokemon.routes.ts # Rutas del feature
+│ │ └── pokemon.module.ts # Módulo de la feature
+│ ├── shared/ # Pipes, constantes, estilos y componentes compartidos
+│ │ ├── shared.module.ts # Importa y exporta módulos comunes
+│ ├── app.routes.ts
+│ ├── app.config.ts
+│ ├── app.component.ts/html/scss
+│ └── app.module.ts # Módulo raíz
+├── assets/
+├── index.html
+└── main.ts
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#  Instalación y ejecución
 
-## Running unit tests
+```bash
+# Clonar el repo
+git clone https://github.com/tuusuario/nombre-del-repo.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instalar dependencias
+npm install
 
-## Running end-to-end tests
+# Levantar el servidor de desarrollo
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+##  Decisiones técnicas
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Implementé NgRx para el manejo de estado global, en este caso de los Pokémon y sus detalles
+- Elegí mantener la arquitectura modularizada por feature y shared y app module. Permitiendo la modularización de componentes para facilitar la lectura y organización del proyecto.
+- Integré PrimeNG para mejorar la experiencia de usuario y aportar soluciones actuales.
+- Utilicé pipes y constantes centralizadas para manejar estilos, clases y datos a lo largo del proyecto.
