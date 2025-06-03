@@ -24,6 +24,7 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute, private store: Store) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.route.paramMap.pipe(takeUntil(this.destroy$)).subscribe((params) => {
       const id = Number(params.get('id'));
 

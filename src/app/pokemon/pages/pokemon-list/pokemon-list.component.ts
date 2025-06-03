@@ -118,7 +118,7 @@ export class PokemonListComponent implements OnInit {
     try {
       this.loading = true;
       const result = await lastValueFrom(
-        this.pokemonService.getByType(type, 1, 30)
+        this.pokemonService.getByType(type, 1, 50)
       );
       this.isFiltered = true;
       this.totalPokemonFiltered = result.total;
@@ -137,6 +137,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   async onPaginatorFiltered(event: any) {
+    window.scrollTo(0, 0);
     const type = this.searchForm.value.type.code;
     const offset = event.page + 1;
     try {

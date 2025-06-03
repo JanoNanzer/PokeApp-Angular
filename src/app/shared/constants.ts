@@ -20,7 +20,7 @@ export const TYPE_IMAGE_MAP: Record<string, string> = {
 };
 
 export const TOTAL_POKEMONS = 1079;
-export const POKEMONS_PER_PAGE = 30;
+export const POKEMONS_PER_PAGE = 50;
 
 export const TYPE_COLORS_MAP: Record<string, string> = {
   bug: '#77c600',
