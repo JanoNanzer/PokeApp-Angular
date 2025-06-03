@@ -61,6 +61,7 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
         'Special Attack',
         'Special Defense',
         'Speed',
+        'Reference',
       ];
 
       pokemon.stats.forEach((s) => {
@@ -73,6 +74,8 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
         const stat = pokemon.stats.find((s) => s.stat.name === name);
         return stat?.base_stat ?? 0;
       });
+
+      statValues.push(0) // Add reference to improve chart readability
 
       this.data = {
         labels: orderedLabels,
