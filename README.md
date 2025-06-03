@@ -10,7 +10,7 @@ Aplicación web construida en Angular que consume la [PokeAPI](https://pokeapi.c
 - Vista de detalle de cada Pokémon
 - Manejo de estado con NgRx
 - Arquitectura modular (`feature`, `shared`, `app`)
-- UI responsive y accesible (con PrimeNG)
+- UI responsive y accesible (con PrimeNG + ChartJs)
 
 ##  Tecnologías
 
@@ -62,6 +62,6 @@ ng serve
 ##  Decisiones técnicas
 
 - Implementé NgRx para el manejo de estado global, en este caso de los Pokémon y sus detalles
-- Elegí mantener la arquitectura modularizada por feature y shared y app module. Permitiendo la modularización de componentes para facilitar la lectura y organización del proyecto.
+- Elegí mantener la arquitectura modularizada por feature, shared y app module. Permitiendo la modularización de componentes para facilitar la lectura y organización del proyecto.
 - Integré PrimeNG para mejorar la experiencia de usuario y aportar soluciones actuales.
 - Utilicé pipes y constantes centralizadas para manejar estilos, clases y datos a lo largo del proyecto.
